@@ -24,6 +24,10 @@ services:
     ports:
       - 5672:5672
       - 13672:15672
+  nats:
+    image: nats:latest
+    ports:
+      - 4222:4222
   
 volumes:
   redis-data:
