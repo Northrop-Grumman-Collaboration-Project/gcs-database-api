@@ -4,7 +4,8 @@ using FluentAssertions;
 using RestSharp;
 using NUnit.Framework;
 
-public class Tests
+namespace DatabaseAPI.Tests;
+public class UnitTests
 {
     [SetUp]
     public void Setup()
@@ -12,14 +13,14 @@ public class Tests
     }
 
     [Test]
-    public void Test1()
+    public void TestingInitalization()
     {
 
         Assert.Pass();
     }
 
     [Test]
-    public void SearchBooks()
+    public void TestRESTEndpointCall()
     {
         var baseUrl = "https://fakerestapi.azurewebsites.net/api/v1/Books";
         RestClient client = new RestClient(baseUrl);
